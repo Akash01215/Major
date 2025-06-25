@@ -57,3 +57,11 @@ Route::post('/category-update/{id}', 'CategoryController@update')->name('categor
 //Route::view('/signup', 'signup');
 //Route::post('/signup-submit', 'UserController@signup')->name('users.signup');
 
+// Customer Routes
+Route::get('/customers', 'CustomerController@index')->name('customers.index');
+Route::get('/customers/create', 'CustomerController@create')->name('customers.create');
+Route::post('/customers', 'CustomerController@store')->name('customers.store');
+Route::get('/customers/{customer}', 'CustomerController@show')->name('customers.show');
+Route::get('/customers/{customer}/edit', 'CustomerController@edit')->name('customers.edit');
+Route::put('/customers/{customer}', 'CustomerController@update')->name('customers.update');
+Route::delete('/customers/{customer}', 'CustomerController@destroy')->name('customers.destroy');
